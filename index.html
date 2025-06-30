@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Emiversal | Presentación</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon.png" type="image/jpeg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+        
+        body {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 450px;
+            height: auto;
+            margin: 0 auto 15px;
+            display: block;
+            cursor: pointer;
+        }
+        
+        h1 {
+            text-align: left;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+        
+        .linea-header {
+            width: 66.66%;
+            height: 2px;
+            background-color: black;
+            margin-bottom: 10px;
+        }
+        
+        .linea-secundaria {
+            height: 2px;
+            background-color: #333;
+            margin: -10px auto 25px auto;
+            width: 66.66%;
+        }
+        
+        .slogan {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .presentacion {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 0;
+        }
+        
+        .presentacion h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #222;
+            text-align: left;
+        }
+        
+        .presentacion p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: justify;
+        }
+        
+        .presentacion .destacado {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #444;
+            border-left: 4px solid #000080;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+        
+        .equipo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            padding: 0;
+        }
+        
+        .miembro {
+            width: 200px;
+            text-align: center;
+        }
+        
+        .foto-miembro {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            border: 3px solid #000080;
+        }
+        
+        .nombre-miembro {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .cargo-miembro {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .valores {
+            background-color: #f0f0f0;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .valores h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: #000080;
+        }
+        
+        .lista-valores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+        }
+        
+        .valor {
+            background-color: white;
+            padding: 20px;
+            width: 220px;
+            border: 1px solid black;
+        }
+        
+        .valor h4 {
+            color: #000080;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .redes-sociales {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            gap: 15px;
+            padding: 20px;
+        }
+        
+        .redes-sociales a {
+            color: white;
+            background-color: #000080;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .redes-sociales a:hover {
+            background-color: #333;
+            transform: scale(1.1);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .nav-principal {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .nav-principal a {
+            color: #000080;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-principal a:hover {
+            background-color: #000080;
+            color: white;
+        }
+
+        .verificacion {
+            background-color: #fff9e6;
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 5px solid #ffd700;
+        }
+
+        .verificacion h3 {
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .verificacion-icono {
+            color: #d4af37;
+            font-size: 28px;
+        }
+
+        .verificacion p {
+            margin-bottom: 15px;
+        }
+
+        .verificacion-lista {
+            margin: 20px 0 20px 40px;
+        }
+
+        .verificacion-lista li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .verificacion-lista li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .ticker {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            margin-bottom: 15px;
+            border: 1px solid black;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 20s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .accion {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nombre-accion {
+            font-weight: bold;
+        }
+
+        .sube {
+            color: green;
+        }
+
+        .baja {
+            color: red;
+        }
+
+        .patrocinadores {
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        .titulo-patrocinadores {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .logos-patrocinadores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .logo-patrocinador {
+            width: 160px;
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .logo-patrocinador:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .contacto {
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            background-color: #f3f8ff;
+        }
+
+        .contacto h3 {
+            color: #000080;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .contacto p {
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .boton-contacto {
+            display: inline-block;
+            background-color: #000080;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            border: 1px solid black;
+        }
+
+        .boton-contacto:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+
+        .fecha-hora {
+            display: flex;
+            margin-bottom: 20px;
+            justify-content: flex-start;
+        }
+        
+        .fecha-hora p {
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 767px) {
+            .logo {
+                width: 360px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .presentacion {
+                padding: 0 10px;
+            }
+            
+            .presentacion p {
+                font-size: 16px;
+            }
+            
+            .presentacion .destacado {
+                font-size: 18px;
+            }
+            
+            .miembro {
+                width: 150px;
+            }
+            
+            .foto-miembro {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .valor {
+                width: 100%;
+            }
+            
+            .nav-principal {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .verificacion {
+                padding: 20px;
+            }
+
+            .logo-patrocinador {
+                width: 120px;
+            }
+            
+            .linea-header, .linea-secundaria {
+                width: 100%;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            body {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://www.emiversal.github.io" target="_blank">
+            <img src="img/EMIVERSAL_LOGO_H.png" alt="Logo EMIVERSAL" class="logo">
+        </a>
+        <h1>Conocenos</h1>
+        <div class="linea-header"></div>
+        <div class="linea-secundaria"></div>
+        <p class="slogan">Periodismo riguroso e independiente para un mundo complejo</p>
+        
+        <!-- Ticker de acciones -->
+        <div class="ticker">
+            <div class="ticker-content">
+                <span class="accion"><span class="nombre-accion">EC</span> <span class="sube">$3580.75</span></span>
+                <span class="accion"><span class="nombre-accion">AMSHEV</span> <span class="baja">$4256.42</span></span>
+                <span class="accion"><span class="nombre-accion">EMIVERSAL</span> <span class="sube">$501.75</span></span>
+                <span class="accion"><span class="nombre-accion">SAENZC</span> <span class="baja">$740.50</span></span>
+                <span class="accion"><span class="nombre-accion">ILDT</span> <span class="sube">$2835.30</span></span>
+                <span class="accion"><span class="nombre-accion">EC</span> <span class="sube">$3580.75</span></span>
+                <span class="accion"><span class="nombre-accion">AMSHEV</span> <span class="baja">$4256.42</span></span>
+                <span class="accion"><span class="nombre-accion">EMIVERSAL</span> <span class="sube">$501.75</span></span>
+                <span class="accion"><span class="nombre-accion">SAENZC</span> <span class="baja">$740.50</span></span>
+                <span class="accion"><span class="nombre-accion">ILDT</span> <span class="sube">$2835.30</span></span>
+            </div>
+        </div>
+        
+        <div class="fecha-hora">
+            <p>CIUDAD DE MÉXICO |</p>
+            <p>Actualizado <span id="hora-actual"></span></p>
+        </div>
+        
+        <div class="nav-principal">
+            <a href="index.html">Inicio</a>
+            <a href="nacional.html">Nacional</a>
+            <a href="belgica-conflicto-hibrido.html">Internacional</a>
+            <a href="economia.html">Economía</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="opinion.html">Opinión</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="presentacion">
+            <h2>Quiénes somos</h2>
+            <div class="linea-header" style="margin-bottom: 10px;"></div>
+            <div class="linea-secundaria"></div>
+            
+            <p>Fundado en 2025, <strong>El Emiversal</strong> se ha consolidado como un referente del periodismo digital en español, comprometido con la verdad, la independencia editorial y el rigor informativo. Nuestra redacción, compuesta por periodistas con amplia experiencia en distintos ámbitos, trabaja cada día para ofrecer a nuestros lectores análisis profundos, reportajes exhaustivos y coberturas en tiempo real de los acontecimientos más relevantes.</p>
+            
+            <p class="destacado">En un mundo digital sobre información y noticias falsas, nosotros logramos destacar... principalmente por las falsas, aunque de vez en cuando se nos cuela una que sí es verdad.</p>            
+            <p>Con sede central en <strong>Ciudad de México</strong> y corresponsales en las principales capitales del mundo (con VPN será), <strong>El Emiversal</strong> cubre la actualidad con una perspectiva global pero sin perder de vista las particularidades locales. Nuestro equipo multicultural nos permite abordar las noticias con sensibilidad y comprensión de los distintos contextos sociales, políticos y culturales.</p>
+            
+            <!-- Nueva sección de verificación -->
+            <div class="verificacion">
+                <h3><i class="fas fa-check-circle verificacion-icono"></i> Cómo identificar nuestras noticias verificadas</h3>
+                
+                <p>En <strong>El Emiversal</strong> implementamos un sistema de verificación para ayudarte a distinguir entre nuestras noticias verificadas y el contenido satírico o de opinión.</p>
+                
+                <ul class="verificacion-lista">
+                    <li>Las noticias que han sido rigurosamente verificadas por nuestro equipo de fact-checkers llevarán un distintivo de verificación dorado.</li>
+                    <li>Este sello garantiza que la información ha pasado por nuestro estricto proceso de verificación de hechos.</li>
+                    <li>Las noticias sin el sello dorado pueden contener elementos de humor, opinión o contenido no verificado.</li>
+                    <li>Nuestro equipo de verificación trabaja las 24 horas para asegurar la precisión de la información marcada.</li>
+                </ul>
+                
+                <p>El sello dorado es tu garantía de que estás consumiendo información confiable y verificada por profesionales.</p>
+            </div>
+            
+            <div class="valores">
+                <h3>Nuestros valores</h3>
+                <ul class="lista-valores">
+                    <li class="valor">
+                        <h4>Independencia</h4>
+                        <p>No estamos vinculados a ningún grupo político, económico o religioso. Nuestro único compromiso es con la verdad y con nuestros lectores.</p>
+                    </li>
+                    <li class="valor">
+                        <h4>Rigor</h4>
+                        <p>Toda información publicada pasa por un estricto proceso de verificación y contraste de fuentes antes de ser publicada.</p>
+                    </li>
+                    <li class="valor">
+                        <h4>Profundidad</h4>
+                        <p>No nos limitamos a contar qué ocurre, sino que explicamos por qué ocurre y qué significa en un contexto más amplio.</p>
+                    </li>
+                    <li class="valor">
+                        <h4>Innovación</h4>
+                        <p>Utilizamos las últimas tecnologías y formatos para contar historias de manera efectiva y atractiva, sin sacrificar el rigor periodístico.</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <h2>Nuestro equipo</h2>
+            <div class="linea-header" style="margin-bottom: 10px;"></div>
+            <div class="linea-secundaria"></div>
+            <p>El equipo de <strong>El Emiversal</strong> está formado por profesionales con amplia experiencia en los principales medios internacionales, especializados en diversas áreas y con dominio de múltiples idiomas. Esta diversidad nos permite ofrecer perspectivas únicas y análisis en profundidad.</p>
+            
+            <div class="equipo">
+                <div class="miembro">
+                    <img src="https://via.placeholder.com/120" alt="Directora" class="foto-miembro">
+                    <p class="nombre-miembro">Lola Mentó</p>
+                    <p class="cargo-miembro">Directora</p>
+                </div>
+                <div class="miembro">
+                    <img src="https://via.placeholder.com/120" alt="Editor jefe" class="foto-miembro">
+                    <p class="nombre-miembro">Juan Por su Casa</p>
+                    <p class="cargo-miembro">Editor jefe</p>
+                </div>
+                <div class="miembro">
+                    <img src="https://via.placeholder.com/120" alt="Jefa internacional" class="foto-miembro">
+                    <p class="nombre-miembro">Sofía Chen</p>
+                    <p class="cargo-miembro">Jefa internacional</p>
+                </div>
+                <div class="miembro">
+                    <img src="https://via.placeholder.com/120" alt="Editor economía" class="foto-miembro">
+                    <p class="nombre-miembro">Tomás de Agua</p>
+                    <p class="cargo-miembro">Editor economía</p>
+                </div>
+            </div>
+            
+            <h2>Nuestro compromiso</h2>
+            <div class="linea-header" style="margin-bottom: 10px;"></div>
+            <div class="linea-secundaria"></div>
+            <p>En <strong>El Emiversal</strong> creemos que el periodismo es un servicio público esencial para el funcionamiento de las democracias. Por ello, nos comprometemos a:</p>
+            
+            <ul style="margin: 20px 0 20px 40px; border: 0px solid black; padding: 20px;">
+                <li style="margin-bottom: 10px;">Informar con veracidad, contrastando siempre nuestras fuentes</li>
+                <li style="margin-bottom: 10px;">Corregir de manera transparente cualquier error que pudiera producirse</li>
+                <li style="margin-bottom: 10px;">Diferenciar claramente entre información y opinión</li>
+                <li style="margin-bottom: 10px;">Proteger las fuentes confidenciales y la privacidad de las personas</li>
+                <li style="margin-bottom: 10px;">Mantener independencia frente a presiones políticas o económicas</li>
+            </ul>
+            
+            <p>Nuestro modelo de financiación se basa en la suscripción de nuestros lectores, lo que nos permite mantener nuestra independencia editorial. Rechazamos cualquier forma de publicidad que pueda comprometer nuestra integridad periodística.</p>
+
+            <h2 class="titulo-patrocinadores">Patrocinadores</h2>
+            <div class="linea-header" style="margin-bottom: 10px;"></div>
+            <div class="linea-secundaria"></div>
+            <div class="patrocinadores">
+                <div class="logos-patrocinadores">
+                    <a href="https://emiliocolor.github.io/mx" target="_blank">
+                        <img src="img/EmilioColor.jpg" alt="Patrocinador 1" class="logo-patrocinador">
+                    </a>
+                    <a href="https://www.example2.com" target="_blank">
+                        <img src="img/saenz-comercializador.png" alt="Patrocinador 2" class="logo-patrocinador">
+                    </a>
+                    <a href="https://www.example3.com" target="_blank">
+                        <img src="img/LOGO AMSHEV 2024.jpg" alt="Patrocinador 3" class="logo-patrocinador">
+                    </a>
+                    <a href="https://www.example4.com" target="_blank">
+                        <img src="img/ILDT-CDMX.png" alt="Patrocinador 4" class="logo-patrocinador">
+                    </a>
+                </div>
+            </div>
+
+            <div class="contacto">
+                <h3>Contáctanos</h3>
+                <p>¿Tienes alguna pregunta, sugerencia o información que quieras compartir con nuestro equipo periodístico?</p>
+                <p>Estamos aquí para escucharte y responder a tus inquietudes.</p>
+                <a href="mailto:contacto@emiversal.com" class="boton-contacto">
+                    <i class="fas fa-envelope"></i> Envíanos un correo
+                </a>
+            </div>
+            
+            <div class="redes-sociales">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2025 El Emiversal - Todos los derechos reservados</p>
+        <p style="margin-top: 10px;">
+            <a href="terminos.html" style="color: #666; text-decoration: none; margin: 0 10px;">Términos de uso</a>
+            <a href="privacidad.html" style="color: #666; text-decoration: none; margin: 0 10px;">Política de privacidad</a>
+            <a href="cookies.html" style="color: #666; text-decoration: none; margin: 0 10px;">Política de cookies</a>
+            <a href="contacto.html" style="color: #666; text-decoration: none; margin: 0 10px;">Contacto</a>
+        </p>
+    </footer>
+    
+    <script>
+        function actualizarHora() {
+            const ahora = new Date();
+            const horas = ahora.getHours().toString().padStart(2, '0');
+            const minutos = ahora.getMinutes().toString().padStart(2, '0');
+            document.getElementById('hora-actual').textContent = `${horas}:${minutos}`;
+        }
+        
+        actualizarHora();
+        
+        setInterval(actualizarHora, 60000);
+    </script>
+</body>
+</html>
