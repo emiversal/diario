@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Emiversal | Internacional - Bélgica y el conflicto híbrido chino-ruso</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon.png" type="image/jpeg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+        
+        body {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            width: 450px;
+            height: auto;
+            margin: 0 auto 15px;
+            display: block;
+            cursor: pointer;
+        }
+        
+        h1 {
+            text-align: left;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+        
+        .linea-header {
+            width: 66.66%;
+            height: 2px;
+            background-color: black;
+            margin-bottom: 15px;
+        }
+        
+        .ticker {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            border: 1px solid black;
+            margin-bottom: 15px;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 20s linear infinite;
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .accion {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .nombre-accion {
+            font-weight: bold;
+        }
+        
+        .sube {
+            color: green;
+        }
+        
+        .baja {
+            color: red;
+        }
+        
+        .fecha-hora {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .fecha-hora p {
+            margin-right: 10px;
+        }
+        
+        .titulo-seccion {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .verificacion-icono {
+            color: #d4af37;
+            font-size: 28px;
+        }
+        
+        .texto {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .imagen {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        .pie-imagen {
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 14px;
+            text-align: left;
+        }
+        
+        .autor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .foto-autor {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        
+        .foto-autor:hover {
+            filter: grayscale(0%);
+        }
+        
+        .nombre-autor {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .boton-bio {
+            background-color: #000080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .info-autor {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .linea-separadora {
+            width: 50%;
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px auto;
+        }
+        
+        .linea-separadora-comentarios {
+         width: 66.66%;
+         height: 1px;
+         background-color: #ccc;
+         margin: 1px 0 30px 0; 
+        }
+
+        .redes-sociales {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        
+        .redes-sociales a {
+            margin: 0 8px;
+            color: black;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        .comentario {
+            margin-bottom: 20px;
+        }
+        
+        .nombre-comentario {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .texto-comentario {
+            line-height: 1.4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 0;
+        }
+        
+        .patrocinadores {
+            margin-bottom: 30px;
+        }
+        
+        .titulo-patrocinadores {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .logos-patrocinadores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        
+        .logo-patrocinador {
+            width: 160px;
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        .logo-patrocinador:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        
+        .agradecimiento {
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .cookie-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .cookie-banner {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 0;
+        }
+        
+        .cookie-banner p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .cookie-banner button {
+            background-color: #000080;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            cursor: pointer;
+            font-weight: bold;
+            min-width: 120px;
+        }
+        
+        .cookie-banner button.secondary {
+            background-color: #666;
+        }
+
+        .linea-secundaria {
+        height: 2px;
+        background-color: #333;
+        margin: -10px auto 25px auto;
+        }
+
+        /* Estilos para fuentes y bibliografía */
+        .seccion-fuentes {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #000080;
+        }
+
+        .titulo-fuentes {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #000080;
+        }
+
+        .lista-fuentes {
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .lista-fuentes li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            text-indent: -20px;
+        }
+
+        .lista-fuentes li:before {
+            content: "• ";
+            color: #000080;
+            font-weight: bold;
+        }
+
+        .lista-fuentes a {
+            color: #000080;
+            text-decoration: none;
+            border-bottom: 1px dotted #000080;
+        }
+
+        .lista-fuentes a:hover {
+            border-bottom: 1px solid #000080;
+        }
+
+        .seccion-bibliografia {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .titulo-bibliografia {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .lista-bibliografia {
+            list-style-type: none;
+        }
+
+        .lista-bibliografia li {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .lista-bibliografia a {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px dotted #333;
+        }
+
+        .lista-bibliografia a:hover {
+            color: #000080;
+            border-bottom: 1px solid #000080;
+        }
+        
+        @media (min-width: 768px) {
+            body {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            .linea-header {
+                width: 66.66%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .logo-patrocinador {
+                width: 150px;
+                height: 80px;
+            }
+            
+            .logos-patrocinadores {
+                gap: 20px;
+                padding: 0 15px;
+            }
+            .logo {
+            width: 360px;
+            height: auto;
+            margin: 0 auto 15px;
+            display: block;
+            cursor: pointer;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cookie-overlay" id="cookieOverlay">
+        <div class="cookie-banner">
+            <p>¿Acepta los términos y condiciones de uso de la página?</p>
+            <div class="cookie-buttons">
+                <button onclick="aceptarTerminos()">Aceptar</button>
+                <button class="secondary" onclick="window.open('terminos.html', '_blank')">Consultar</button>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <a href="https://www.emiversal.github.io" target="_blank">
+            <img src="../img/EMIVERSAL_LOGO_H.png" alt="Logo EMIVERSAL" class="logo">
+        </a>
+        <h1>Internacional <i class="fas fa-check-circle verificacion-icono"></i></h1>
+        <div class="linea-header" style="margin-bottom: 10px;"></div>
+        <div class="linea-secundaria"></div>
+        <div class="ticker">
+            <div class="ticker-content">
+                <span class="accion"><span class="nombre-accion">EC</span> <span class="sube">$3580.75</span></span>
+                <span class="accion"><span class="nombre-accion">AMSHEV</span> <span class="baja">$4256.42</span></span>
+                <span class="accion"><span class="nombre-accion">EMIVERSAL</span> <span class="sube">$501.75</span></span>
+                <span class="accion"><span class="nombre-accion">SAENZC</span> <span class="baja">$740.50</span></span>
+                <span class="accion"><span class="nombre-accion">ILDT</span> <span class="sube">$2835.30</span></span>
+                <span class="accion"><span class="nombre-accion">EC</span> <span class="sube">$3580.75</span></span>
+                <span class="accion"><span class="nombre-accion">AMSHEV</span> <span class="baja">$4256.42</span></span>
+                <span class="accion"><span class="nombre-accion">EMIVERSAL</span> <span class="sube">$501.75</span></span>
+                <span class="accion"><span class="nombre-accion">SAENZC</span> <span class="baja">$740.50</span></span>
+                <span class="accion"><span class="nombre-accion">ILDT</span> <span class="sube">$2835.30</span></span>
+            </div>
+        </div>
+        <div class="fecha-hora">
+            <p>29 JUN 2025 |</p>
+            <p>Actualizado <span id="hora-actual"></span></p>
+        </div>
+    </header>
+    
+    <main>
+        <h2 class="titulo-seccion">Bélgica en primera línea contra el conflicto híbrido chino-ruso</h2>
+        
+        <p class="texto">BRUSELAS - El Reino de Bélgica, nación estratégica en el corazón de Europa y sede de las principales instituciones de la Unión Europea y la OTAN, se encuentra en el centro de los esfuerzos para contrarrestar las tácticas de guerra híbrida empleadas por Rusia con el respaldo de China en el conflicto ucraniano.</p>
+        
+        <img src="img-noticias/belgica2.jpg" alt="Edificios de la UE en Bruselas" class="imagen">
+        <p class="pie-imagen">Sede de la Unión Europea en Bruselas, Bélgica. (Foto: Colegia)</p>
+        <div class="linea-separadora-comentarios"></div>
+
+        <div class="autor">
+            <img src="https://via.placeholder.com/100" alt="Foto del autor" class="foto-autor">
+            <p class="nombre-autor">Sofía Chen</p>
+            <button class="boton-bio">Ver biografía</button>
+            <p class="info-autor">Ciudad de México - 29 JUN 2025 - 08:30 GMT+5</p>
+        </div>
+        
+        <div class="linea-separadora"></div>
+        
+        <div class="redes-sociales">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        
+        <p class="texto">Con una posición geopolítica clave en Europa Occidental, Bélgica ha mantenido históricamente un papel central en la política continental. Su ubicación fronteriza entre potencias rivales y su temprana división religiosa entre el norte protestante y el sur católico forjaron una identidad política única, consolidada con su independencia en 1830.</p>
+        
+        <p class="texto">Actualmente, como monarquía constitucional federal, Bélgica participa activamente en el Comité 1540 del Consejo de Seguridad de la ONU, dedicado a prevenir la proliferación de armas de destrucción masiva. Este compromiso con la seguridad internacional adquiere especial relevancia en el contexto del conflicto híbrido en Ucrania.</p>
+        
+        <h2 class="titulo-seccion">Posición oficial belga</h2>
+        
+        <p class="texto">El gobierno belga ha manifestado un "firme y activo compromiso" con el apoyo a Ucrania frente a lo que califica como "agresión de la Federación de Rusia". El primer ministro Alexandre De Croo ha subrayado que este conflicto trasciende lo territorial, representando una amenaza directa a los principios fundamentales de la sociedad europea: libertad, igualdad, soberanía nacional y derechos humanos.</p>
+        
+        <img src="img-noticias/belgica1.webp" alt="Primer ministro belga Alexandre De Croo" class="imagen">
+        <p class="pie-imagen">El presidente ucraniano, Volodímir Zelenski, junto al primer ministro belga, Alexander De Croo, y la ministra de Defensa, Ludivine Dedonder, posan frente a cazas F-16 en el aeropuerto militar de Melsbroek, Bruselas, 28 de mayo. (Foto: EFE)</p>
+        
+        <p class="texto">"Nuestro apoyo a Ucrania incluye tanto ayuda material letal y no letal como formación, tanto dentro del país como en el extranjero", declaró De Croo, reconociendo la complejidad de un conflicto que involucra tácticas híbridas como desinformación, sabotajes y ataques cibernéticos.</p>
+        
+        <h2 class="titulo-seccion">Bélgica como centro estratégico</h2>
+        
+        <p class="texto">Como sede de la UE y la OTAN, Bruselas se ha convertido en el epicentro de la coordinación internacional contra las tácticas híbridas. Bélgica se encuentra en la primera línea para contrarrestar los intentos de desinformación y sabotaje que buscan debilitar la unidad europea.</p>
+        
+        <p class="texto">El gobierno belga justifica su postura en la defensa del derecho internacional y la estabilidad europea. Sus propuestas incluyen:</p>
+        
+        <ul class="texto" style="margin-left: 20px; margin-bottom: 20px;">
+            <li>Continuar el apoyo militar y humanitario a Ucrania</li>
+            <li>Fortalecer la cooperación con la UE y la OTAN</li>
+            <li>Reforzar las capacidades de seguridad frente a amenazas híbridas</li>
+            <li>Participar activamente en estrategias contra la desinformación</li>
+        </ul>
+
+        <!-- Sección de Fuentes con enlaces actualizados -->
+        <div class="seccion-fuentes">
+            <h3 class="titulo-fuentes">Fuentes Consultadas</h3>
+            <ul class="lista-fuentes">
+                <li><a href="https://viajes.nationalgeographic.com.es/p/belgica" target="_blank">Bélgica, un país de cuento de hadas. Viajes National Geographic</a></li>
+                <li><a href="https://www.swissinfo.ch/spa/b%c3%a9lgica-subraya-su-%22f%c3%a9rreo%22-compromiso-con-ucrania-en-los-mil-d%c3%adas-de-guerra-rusa/88227841" target="_blank">Efe. (2024). Bélgica subraya su «férreo» compromiso con Ucrania. SWI swissinfo.ch</a></li>
+                <li><a href="https://www.un.org/es/sc/1540/about-1540-committee/composition/former-compositions.shtml" target="_blank">Naciones Unidas. Comité 1540 | Composición</a></li>
+                <li><a href="https://european-union.europa.eu/principles-countries-history/eu-countries/belgium_es" target="_blank">Perfiles de los Estados miembros de la UE: Bélgica. Unión Europea</a></li>
+                <li><a href="https://es.euronews.com/my-europe/2024/07/18/ha-empezado-rusia-una-guerra-silenciosa-e-hibrida-contra-europa" target="_blank">¿Ha empezado Rusia una guerra silenciosa e híbrida contra Europa? Euronews</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección de Bibliografía con enlaces actualizados -->
+        <div class="seccion-bibliografia">
+            <h3 class="titulo-bibliografia">Bibliografía de Referencia</h3>
+            <ul class="lista-bibliografia">
+                <li>Bélgica, un país de cuento de hadas. (n.d.). <a href="https://viajes.nationalgeographic.com.es/p/belgica" target="_blank">Viajes National Geographic</a>.</li>
+                <li>Efe. (2024, November 19). <a href="https://www.swissinfo.ch/spa/b%c3%a9lgica-subraya-su-%22f%c3%a9rreo%22-compromiso-con-ucrania-en-los-mil-d%c3%adas-de-guerra-rusa/88227841" target="_blank">Bélgica subraya su «férreo» compromiso con Ucrania en los mil días de guerra rusa</a>. SWI swissinfo.ch.</li>
+                <li>Naciones Unidas. (n.d.). <a href="https://www.un.org/es/sc/1540/about-1540-committee/composition/former-compositions.shtml" target="_blank">Comité 1540 | Composición | Composiciones anteriores</a>.</li>
+                <li>Pérez Ayala, A. (2018). <a href="https://ojs.ehu.eus/index.php/HC/article/download/19640/17523" target="_blank">Bélgica, un modelo de construcción nacional</a>. Universidad del País Vasco.</li>
+                <li>Perfiles de los Estados miembros de la UE: Bélgica. (n.d.). <a href="https://european-union.europa.eu/principles-countries-history/eu-countries/belgium_es" target="_blank">Unión Europea</a>.</li>
+                <li>¿Ha empezado Rusia una guerra silenciosa e híbrida contra Europa? (2024, July 18). <a href="https://es.euronews.com/my-europe/2024/07/18/ha-empezado-rusia-una-guerra-silenciosa-e-hibrida-contra-europa" target="_blank">Euronews</a>.</li>
+            </ul>
+        </div>
+        
+        <div class="linea-separadora-comentarios"></div>
+        
+        <h3 style="margin-bottom: 15px;">Comentarios</h3>
+        <div class="linea-header" style="margin-bottom: 10px;"></div>
+        <div class="linea-secundaria"></div>
+
+        <div class="comentario">
+            <p class="nombre-comentario">Sophie Martin</p>
+            <p class="texto-comentario">Excelente análisis sobre el papel crucial de Bélgica en este conflicto. Como bruselense, me enorgullece ver cómo nuestro país contribuye a la seguridad europea.</p>
+        </div>
+        
+        <div class="comentario">
+            <p class="nombre-comentario">Jean-Luc Bernard</p>
+            <p class="texto-comentario">Interesante perspectiva, aunque echo de menos más detalles sobre cómo afecta específicamente la influencia china en este conflicto híbrido.</p>
+        </div>
+        
+        <div class="comentario">
+            <p class="nombre-comentario">Elena Kovac</p>
+            <p class="texto-comentario">Como ucraniana residente en Bélgica, agradezco el apoyo del gobierno belga. Este artículo refleja bien la importancia estratégica de este país.</p>
+        </div>
+        
+        <div class="linea-separadora-comentarios"></div>
+        
+        <div class="patrocinadores">
+            <h3 style="margin-bottom: 15px;">Patrocinadores</h3>
+            <div class="linea-header" style="margin-bottom: 10px;"></div>
+            <div class="linea-secundaria"></div>
+
+            <div class="logos-patrocinadores">
+                <a href="https://emiliocolor.github.io/mx" target="_blank">
+                    <img src="../img/EmilioColor.jpg" alt="Patrocinador 1" class="logo-patrocinador">
+                </a>
+                <a href="https://www.example2.com" target="_blank">
+                    <img src="../img/saenz-comercializador.png" alt="Patrocinador 2" class="logo-patrocinador">
+                </a>
+                <a href="https://www.example3.com" target="_blank">
+                    <img src="../img/LOGO AMSHEV 2024.jpg" alt="Patrocinador 3" class="logo-patrocinador">
+                </a>
+                <a href="https://www.example4.com" target="_blank">
+                    <img src="../img/ILDT-CDMX.png" alt="Patrocinador 4" class="logo-patrocinador">
+                </a>
+            </div>
+        </div>
+        
+        <div class="agradecimiento">
+            <p>Gracias por leernos</p>
+        </div>
+    </main>
+    
+    <script>
+        function actualizarHora() {
+            const ahora = new Date();
+            const horas = ahora.getHours().toString().padStart(2, '0');
+            const minutos = ahora.getMinutes().toString().padStart(2, '0');
+            document.getElementById('hora-actual').textContent = `${horas}:${minutos}`;
+        }
+        
+        actualizarHora();
+        
+        setInterval(actualizarHora, 60000);
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieOverlay = document.getElementById('cookieOverlay');
+            if (!sessionStorage.getItem('terminosAceptados')) {
+                cookieOverlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            } else {
+                cookieOverlay.style.display = 'none';
+            }
+        });
+        
+        function aceptarTerminos() {
+            sessionStorage.setItem('terminosAceptados', 'true');
+            document.getElementById('cookieOverlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
