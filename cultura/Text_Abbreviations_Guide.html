@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Emiversal | Cultura - Abreviaturas de texto en inglés</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/favicon.png" type="image/jpeg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+        
+        body {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            width: 450px;
+            height: auto;
+            margin: 0 auto 15px;
+            display: block;
+            cursor: pointer;
+        }
+        
+        h1 {
+            text-align: left;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+        
+        .linea-header {
+            width: 66.66%;
+            height: 2px;
+            background-color: black;
+            margin-bottom: 15px;
+        }
+        
+        .ticker {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            border: 1px solid black;
+            margin-bottom: 15px;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 20s linear infinite;
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .accion {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .nombre-accion {
+            font-weight: bold;
+        }
+        
+        .sube {
+            color: green;
+        }
+        
+        .baja {
+            color: red;
+        }
+        
+        .fecha-hora {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .fecha-hora p {
+            margin-right: 10px;
+        }
+        
+        .titulo-seccion {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .verificacion-icono {
+            color: #d4af37;
+            font-size: 28px;
+        }
+        
+        .texto {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .imagen {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        
+        .pie-imagen {
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 14px;
+            text-align: left;
+            color: #666;
+        }
+        
+        .autor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .foto-autor {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        
+        .foto-autor:hover {
+            filter: grayscale(0%);
+        }
+        
+        .nombre-autor {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .boton-bio {
+            background-color: #000080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .boton-bio:hover {
+            background-color: #0000a0;
+        }
+        
+        .info-autor {
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .linea-separadora {
+            width: 50%;
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px auto;
+        }
+        
+        .linea-separadora-comentarios {
+            width: 66.66%;
+            height: 1px;
+            background-color: #ccc;
+            margin: 1px 0 30px 0; 
+        }
+
+        .redes-sociales {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        
+        .redes-sociales a {
+            margin: 0 8px;
+            color: black;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .redes-sociales a:hover {
+            background-color: #000080;
+            color: white;
+        }
+        
+        .comentario {
+            margin-bottom: 20px;
+        }
+        
+        .nombre-comentario {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .texto-comentario {
+            line-height: 1.4;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        
+        .patrocinadores {
+            margin-bottom: 30px;
+        }
+        
+        .titulo-patrocinadores {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .logos-patrocinadores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        
+        .logo-patrocinador {
+            width: 160px;
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 10px;
+            background-color: white;
+            border-radius: 4px;
+        }
+        
+        .logo-patrocinador:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .agradecimiento {
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .cookie-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .cookie-banner {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .cookie-banner p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .cookie-banner button {
+            background-color: #000080;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            cursor: pointer;
+            font-weight: bold;
+            min-width: 120px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .cookie-banner button:hover {
+            background-color: #0000a0;
+        }
+        
+        .cookie-banner button.secondary {
+            background-color: #666;
+        }
+        
+        .cookie-banner button.secondary:hover {
+            background-color: #555;
+        }
+
+        .linea-secundaria {
+            height: 2px;
+            background-color: #333;
+            margin: -10px auto 25px auto;
+        }
+
+        /* Contenedor para centrar las tablas */
+        .contenedor-tabla {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
+        /* Estilos mejorados para las tablas */
+        .tabla-abreviaturas {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin: 0 auto;
+        }
+        
+        .tabla-abreviaturas th {
+            background-color: #f5f5f5;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: bold;
+            border-bottom: 2px solid #ddd;
+            color: #333;
+        }
+        
+        .tabla-abreviaturas td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+        
+        .tabla-abreviaturas tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .tabla-abreviaturas tr:hover td {
+            background-color: #f9f9f9;
+        }
+        
+        .tabla-abreviaturas tr:nth-child(even) td {
+            background-color: #fafafa;
+        }
+        
+        /* Mantenemos los estilos responsive */
+        @media (min-width: 768px) {
+            body {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            .linea-header {
+                width: 66.66%;
+            }
+            
+            .contenedor-tabla {
+                width: 100%;
+                overflow-x: visible;
+            }
+            
+            .tabla-abreviaturas {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .logo-patrocinador {
+                width: 150px;
+                height: 80px;
+            }
+            
+            .logos-patrocinadores {
+                gap: 20px;
+                padding: 0 15px;
+            }
+            
+            .logo {
+                width: 360px;
+                height: auto;
+                margin: 0 auto 15px;
+                display: block;
+                cursor: pointer;
+            }
+            
+            .contenedor-tabla {
+                width: 100vw;
+                margin-left: -20px;
+                margin-right: -20px;
+                padding: 0 20px;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .tabla-abreviaturas {
+                min-width: 600px;
+            }
+            
+            body {
+                padding: 15px;
+                overflow-x: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cookie-overlay" id="cookieOverlay">
+        <div class="cookie-banner">
+            <p>¿Acepta los términos y condiciones de uso de la página?</p>
+            <div class="cookie-buttons">
+                <button onclick="aceptarTerminos()">Aceptar</button>
+                <button class="secondary" onclick="window.open('terminos.html', '_blank')">Consultar</button>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <a href="https://emiversal.github.io/diario/" target="_blank">
+            <img src="../img/EMIVERSAL_LOGO_H.png" alt="Logo EMIVERSAL" class="logo">
+        </a>
+        <h1>Cultura <i class="fas fa-check-circle verificacion-icono"></i></h1>
+        <div class="linea-header" style="margin-bottom: 10px;"></div>
+        <div class="linea-secundaria"></div>
+        <div class="ticker">
+            <div class="ticker-content">
+                <span class="accion"><span class="nombre-accion">EC</span> <span class="sube">$3580.75</span></span>
+                <span class="accion"><span class="nombre-accion">AMSHEV</span> <span class="baja">$4256.42</span></span>
+                <span class="accion"><span class="nombre-accion">EMIVERSAL</span> <span class="sube">$501.75</span></span>
+                <span class="accion"><span class="nombre-accion">SAENZC</span> <span class="baja">$740.50</span></span>
+                <span class="accion"><span class="nombre-accion">ILDT</span> <span class="sube">$2835.30</span></span>
+                <span class="accion"><span class="nombre-accion">EC</span> <span class="sube">$3580.75</span></span>
+                <span class="accion"><span class="nombre-accion">AMSHEV</span> <span class="baja">$4256.42</span></span>
+                <span class="accion"><span class="nombre-accion">EMIVERSAL</span> <span class="sube">$501.75</span></span>
+                <span class="accion"><span class="nombre-accion">SAENZC</span> <span class="baja">$740.50</span></span>
+                <span class="accion"><span class="nombre-accion">ILDT</span> <span class="sube">$2835.30</span></span>
+            </div>
+        </div>
+        <div class="fecha-hora">
+            <p>29 JUN 2025 |</p>
+            <p>Actualizado <span id="hora-actual"></span></p>
+        </div>
+    </header>
+    
+    <main>
+        <h2 class="titulo-seccion">Conoce las abreviaturas de texto en inglés - Reporte del Leonardo Di Tambo Institute</h2>
+        
+        <p class="texto">En la era digital, la comunicación a través de mensajes de texto ha desarrollado su propio lenguaje, lleno de abreviaturas y códigos que permiten una comunicación más rápida y eficiente. El Leonardo Di Tambo Institute presenta este completo reporte sobre las abreviaturas más comunes en inglés y sus equivalentes en español.</p>
+        
+        <img src="img-noticias/ventana-de-la-pantalla-tactil-ocasional-persona-camiseta.jpg" alt="Persona escribiendo en teléfono móvil" class="imagen">
+        <p class="pie-imagen">La comunicación digital ha creado un nuevo lenguaje de abreviaturas. (Foto: Katemangostar)</p>
+        <div class="linea-separadora-comentarios"></div>
+
+        <div class="autor">
+            <img src="https://via.placeholder.com/100" alt="Foto del autor" class="foto-autor">
+            <p class="nombre-autor">Leonardo Di Tambo</p>
+            <a href="https://drive.google.com/file/d/14VTiauxrC65rwN0Jd1PfGdJaA9YXszAO/view?usp=sharing" class="boton-bio" target="_blank">Ver PDF Text Abbreviations</a>
+            <p class="info-autor">Ciudad de México - 29 JUN 2025 - 08:30 GMT+5</p>
+        </div>
+        
+        <div class="linea-separadora"></div>
+        
+        <div class="redes-sociales">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        
+        <h3>I. Traducción de mensajes abreviados</h3>
+        <div class="contenedor-tabla">
+            <table class="tabla-abreviaturas">
+                <thead>
+                    <tr><th>Abreviación</th><th>Inglés</th><th>Español</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>R U @ home?</td><td>Are you at home?</td><td>¿Estás en casa?</td></tr>
+                    <tr><td>I need ur hlp asap.</td><td>I need your help as soon as possible.</td><td>Necesito tu ayuda lo antes posible.</td></tr>
+                    <tr><td>Its my cmptr agn</td><td>It's my computer again.</td><td>Es mi computadora otra vez.</td></tr>
+                    <tr><td>LOL</td><td>Laughing Out Loud</td><td>Muerto de risa / ¡Ja, ja!</td></tr>
+                    <tr><td>Thx m8.</td><td>Thanks mate.</td><td>Gracias, amigo.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>II. Abreviaciones de una sola letra o número</h3>
+        <div class="contenedor-tabla">
+            <table class="tabla-abreviaturas">
+                <thead>
+                    <tr><th>Palabra</th><th>Abreviatura</th><th>Español</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>for</td><td>4</td><td>para / por</td></tr>
+                    <tr><td>you</td><td>u</td><td>tú / usted</td></tr>
+                    <tr><td>are</td><td>r</td><td>eres / estás</td></tr>
+                    <tr><td>be</td><td>b</td><td>ser / estar</td></tr>
+                    <tr><td>too/two</td><td>2</td><td>también / dos</td></tr>
+                    <tr><td>see</td><td>c</td><td>ver</td></tr>
+                    <tr><td>tea</td><td>t</td><td>té</td></tr>
+                    <tr><td>eggs</td><td>x</td><td>huevos</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>III. Iniciales que representan frases completas</h3>
+        <div class="contenedor-tabla">
+            <table class="tabla-abreviaturas">
+                <thead>
+                    <tr><th>Abreviatura</th><th>Frase completa</th><th>Español</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ASAP</td><td>as soon as possible</td><td>lo antes posible</td></tr>
+                    <tr><td>BTW</td><td>by the way</td><td>por cierto</td></tr>
+                    <tr><td>FYI</td><td>for your information</td><td>para tu información</td></tr>
+                    <tr><td>GTG</td><td>got to go</td><td>tengo que irme</td></tr>
+                    <tr><td>IMO</td><td>in my opinion</td><td>en mi opinión</td></tr>
+                    <tr><td>OMG</td><td>oh my god</td><td>¡oh Dios mío!</td></tr>
+                    <tr><td>TTYL</td><td>talk to you later</td><td>hablamos luego</td></tr>
+                    <tr><td>TIA</td><td>thanks in advance</td><td>gracias de antemano</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>IV. Abreviaciones con números por su pronunciación</h3>
+        <div class="contenedor-tabla">
+            <table class="tabla-abreviaturas">
+                <thead>
+                    <tr><th>Abreviación</th><th>Palabra</th><th>Español</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>2day</td><td>today</td><td>hoy</td></tr>
+                    <tr><td>2nite</td><td>tonight</td><td>esta noche</td></tr>
+                    <tr><td>2moro</td><td>tomorrow</td><td>mañana</td></tr>
+                    <tr><td>B4</td><td>before</td><td>antes</td></tr>
+                    <tr><td>L8</td><td>late</td><td>tarde</td></tr>
+                    <tr><td>GR8</td><td>great</td><td>genial / estupendo</td></tr>
+                    <tr><td>W8</td><td>wait</td><td>espera</td></tr>
+                    <tr><td>M8</td><td>mate</td><td>amigo</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>V. Otras abreviaturas comunes</h3>
+        <div class="contenedor-tabla">
+            <table class="tabla-abreviaturas">
+                <thead>
+                    <tr><th>Abreviación</th><th>Palabra</th><th>Español</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>YR</td><td>your</td><td>tu / tuyo</td></tr>
+                    <tr><td>PLS</td><td>please</td><td>por favor</td></tr>
+                    <tr><td>WOT</td><td>what</td><td>qué</td></tr>
+                    <tr><td>BCZ</td><td>because</td><td>porque</td></tr>
+                    <tr><td>SPK</td><td>speak</td><td>hablar</td></tr>
+                    <tr><td>WKND</td><td>weekend</td><td>fin de semana</td></tr>
+                    <tr><td>THX</td><td>thanks</td><td>gracias</td></tr>
+                    <tr><td>XLNT</td><td>excellent</td><td>excelente</td></tr>
+                    <tr><td>MSG</td><td>message</td><td>mensaje</td></tr>
+                    <tr><td>HMWK</td><td>homework</td><td>tarea</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>VI. Mensajes completos</h3>
+        <div class="contenedor-tabla">
+            <table class="tabla-abreviaturas">
+                <thead>
+                    <tr><th>Mensaje abreviado</th><th>Inglés</th><th>Español</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Can U PLS come 2 C me L8R?</td><td>Can you please come to see me later?</td><td>¿Puedes venir a verme más tarde, por favor?</td></tr>
+                    <tr><td>I'll C U 2moro B4 school.</td><td>I'll see you tomorrow before school.</td><td>Te veré mañana antes de la escuela.</td></tr>
+                    <tr><td>I'll w8 4 YR next MSG.</td><td>I'll wait for your next message.</td><td>Esperaré tu próximo mensaje.</td></tr>
+                    <tr><td>Wot R U doing at the WKND?</td><td>What are you doing at the weekend?</td><td>¿Qué harás el fin de semana?</td></tr>
+                    <tr><td>Will U B at home L8R 2day?</td><td>Will you be at home later today?</td><td>¿Estarás en casa más tarde hoy?</td></tr>
+                    <tr><td>THX 4 the presents. They R GR8.</td><td>Thanks for the presents. They are great.</td><td>Gracias por los regalos. Son geniales.</td></tr>
+                    <tr><td>I can C U @ 6 BCZ I haven't got any HMWK.</td><td>I can see you at 6 because I haven't got any homework.</td><td>Puedo verte a las 6 porque no tengo tarea.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="linea-separadora-comentarios"></div>
+        
+        <h3 style="margin-bottom: 15px;">Comentarios</h3>
+        <div class="linea-header" style="margin-bottom: 10px;"></div>
+        <div class="linea-secundaria"></div>
+
+        <div class="comentario">
+            <p class="nombre-comentario">María González</p>
+            <p class="texto-comentario">¡Muy útil esta guía! Siempre me preguntaba qué significaban algunas de estas abreviaturas cuando mis hijos me enviaban mensajes.</p>
+        </div>
+        
+        <div class="comentario">
+            <p class="nombre-comentario">Carlos M.</p>
+            <p class="texto-comentario">Excelente trabajo del Leonardo Di Tambo Institute. Esta guía es perfecta para quienes estamos aprendiendo inglés y queremos entender los mensajes de texto.</p>
+        </div>
+        
+        <div class="comentario">
+            <p class="nombre-comentario">Ana Torres</p>
+            <p class="texto-comentario">Falta incluir algunas abreviaturas más modernas como "SMH" (shaking my head) o "ICYMI" (in case you missed it), pero en general muy completo.</p>
+        </div>
+        
+        <div class="linea-separadora-comentarios"></div>
+        
+        <div class="patrocinadores">
+            <h3 style="margin-bottom: 15px;">Patrocinadores</h3>
+            <div class="linea-header" style="margin-bottom: 10px;"></div>
+            <div class="linea-secundaria"></div>
+
+            <div class="logos-patrocinadores">
+                <a href="https://emiliocolor.github.io/mx" target="_blank">
+                    <img src="../img/EmilioColor.jpg" alt="Patrocinador 1" class="logo-patrocinador">
+                </a>
+                <a href="https://www.example2.com" target="_blank">
+                    <img src="../img/saenz-comercializador.png" alt="Patrocinador 2" class="logo-patrocinador">
+                </a>
+                <a href="https://www.example3.com" target="_blank">
+                    <img src="../img/LOGO AMSHEV 2024.jpg" alt="Patrocinador 3" class="logo-patrocinador">
+                </a>
+                <a href="https://www.example4.com" target="_blank">
+                    <img src="../img/ILDT-CDMX.png" alt="Patrocinador 4" class="logo-patrocinador">
+                </a>
+            </div>
+        </div>
+        
+        <div class="agradecimiento">
+            <p>Gracias por leernos</p>
+        </div>
+    </main>
+    
+    <script>
+        function actualizarHora() {
+            const ahora = new Date();
+            const horas = ahora.getHours().toString().padStart(2, '0');
+            const minutos = ahora.getMinutes().toString().padStart(2, '0');
+            document.getElementById('hora-actual').textContent = `${horas}:${minutos}`;
+        }
+        
+        actualizarHora();
+        
+        setInterval(actualizarHora, 60000);
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieOverlay = document.getElementById('cookieOverlay');
+            if (!sessionStorage.getItem('terminosAceptados')) {
+                cookieOverlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            } else {
+                cookieOverlay.style.display = 'none';
+            }
+        });
+        
+        function aceptarTerminos() {
+            sessionStorage.setItem('terminosAceptados', 'true');
+            document.getElementById('cookieOverlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
